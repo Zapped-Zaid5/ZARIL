@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVIVAL: LOST - Horror Game</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e;
+            color: #e6e6e6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(26, 26, 46, 0.7);
+            margin-bottom: 50px;
+            overflow: hidden;
+        }
+        
+        .header-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        .header-content {
+            text-align: center;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 0 0 10px #000;
+            color: #4da6ff;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            color: #d1d1d1;
+        }
+        
+        section {
+            margin-bottom: 60px;
+            background-color: #252547;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            color: #4da6ff;
+            border-bottom: 2px solid #4da6ff;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .characters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .character-card {
+            display: flex;
+            flex-direction: column;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        
+        .character-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .character-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            background-color: #333;
+        }
+        
+        .character-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .character-name {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        
+        .character-bio {
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        .character-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #4da6ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+        
+        .character-link:hover {
+            background-color: #3a80c2;
+        }
+        
+        .green-theme {
+            background-color: #1a472a;
+        }
+        
+        .green-theme .character-name {
+            color: #2ecc71;
+        }
+        
+        .red-theme {
+            background-color: #5c1a1a;
+        }
+        
+        .red-theme .character-name {
+            color: #e74c3c;
+        }
+        
+        .yellow-theme {
+            background-color: #5c4d1a;
+        }
+        
+        .yellow-theme .character-name {
+            color: #f1c40f;
+        }
+        
+        .white-theme {
+            background-color: #2c3e50;
+        }
+        
+        .white-theme .character-name {
+            color: #ecf0f1;
+        }
+        
+        .concept {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .concept-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #333;
+        }
+        
+        .concept-text {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .button {
+            padding: 12px 24px;
+            background-color: #4da6ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        
+        .button:hover {
+            background-color: #3a80c2;
+        }
+        
+        .about {
+            text-align: center;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #141428;
+            color: #888;
+        }
+        
+        @media (max-width: 768px) {
+            .characters {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            header {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="LOST.png" alt="REVIVAL: LOST Background" class="header-bg">
+        <div class="header-content">
+            <h1>REVIVAL: LOST</h1>
+            <p class="tagline">A horror game, price is 5 bucks.</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="characters">
+            <h2>Main Characters</h2>
+            <div class="characters">
+                <div class="character-card green-theme">
+                    <img src="Zaril.png" alt="Zaril Nanaz" class="character-image">
+                    <div class="character-info">
+                        <h3 class="character-name">Zaril Nanaz</h3>
+                        <p class="character-bio">One of the Nanaz brothers who are deep in the rivalry, he is the nerd brother and one of the protagonists of the game, click for her bio to learn more.</p>
+                        <a href="https://zapped-zaid5.github.io/ZARIL/" class="character-link">View Bio</a>
+                    </div>
+                </div>
+                
+                <div class="character-card red-theme">
+                    <img src="Liraz.png" alt="Liraz Nanaz" class="character-image">
+                    <div class="character-info">
+                        <h3 class="character-name">Liraz Nanaz</h3>
+                        <p class="character-bio">One of the Nanaz brothers who are deep in the rivalry, he is the scavenger brother and one of the protagonists of the game, click for her bio to learn more.</p>
+                        <a href="https://zapped-zaid5.github.io/LIRAZ/" class="character-link">View Bio</a>
+                    </div>
+                </div>
+                
+                <div class="character-card yellow-theme">
+                    <img src="Genie.png" alt="Genie[Unnamed]" class="character-image">
+                    <div class="character-info">
+                        <h3 class="character-name">Genie[Unnamed]</h3>
+                        <p class="character-bio">a genie? what's she doing here? i dunno check her bio to find out i guess</p>
+                        <a href="https://zapped-zaid5.github.io/GENIE/" class="character-link">View Bio</a>
+                    </div>
+                </div>
+                
+                <div class="character-card white-theme">
+                    <img src="Sinus.png" alt="Sinus" class="character-image">
+                    <div class="character-info">
+                        <h3 class="character-name">Sinus</h3>
+                        <p class="character-bio">Organism reading this, i am Sinus, An EYX. read my bio to comprehend</p>
+                        <a href="https://zapped-zaid5.github.io/SINUS/" class="character-link">View Bio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="concept">
+            <h2>Game Concept</h2>
+            <div class="concept">
+                <img src="House.png" alt="Game House Concept" class="concept-image">
+                <p class="concept-text">explore the house where a family once happy now roams as ghosts due to some incident as one of the 2 brothers in REVIVAL: LOST also do check the gameplay and house info if ur interested</p>
+                <div class="buttons">
+                    <a href="https://zapped-zaid5.github.io/GAME/" class="button">Gameplay Info</a>
+                    <a href="https://zapped-zaid5.github.io/LORE/" class="button">Backdrop Info</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <h2>About Transception Games</h2>
+            <div class="about">
+                <p>Transception Games was founded by Zapped Zaid with the vision of creating immersive and adaptive gaming experiences that blur the line between player choice and narrative.</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© LOST by Transception Games | Website assistance by Vidyut</p>
+    </footer>
+</body>
+</html>
