@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REVIVAL: LOST - Horror Game</title>
+    <title>Zaril Nanaz - REVIVAL: LOST Character Bio</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -25,7 +25,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: rgba(26, 26, 46, 0.7);
+            background-color: rgba(26, 46, 26, 0.7);
             margin-bottom: 50px;
             overflow: hidden;
         }
@@ -48,7 +48,7 @@
             font-size: 4rem;
             margin: 0;
             text-shadow: 0 0 10px #000;
-            color: #4da6ff;
+            color: #2ecc71;
         }
         
         .tagline {
@@ -66,145 +66,73 @@
         }
         
         h2 {
-            color: #4da6ff;
-            border-bottom: 2px solid #4da6ff;
+            color: #2ecc71;
+            border-bottom: 2px solid #2ecc71;
             padding-bottom: 10px;
             margin-top: 0;
+            font-size: 2rem;
         }
         
-        .characters {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .character-card {
-            display: flex;
-            flex-direction: column;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s;
-            height: 100%;
-        }
-        
-        .character-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .character-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            background-color: #333;
-        }
-        
-        .character-info {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .character-name {
-            margin-top: 0;
+        h3 {
+            color: #27ae60;
+            margin-top: 30px;
+            margin-bottom: 15px;
             font-size: 1.5rem;
         }
         
-        .character-bio {
-            margin-bottom: 20px;
-            flex-grow: 1;
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
         
-        .character-link {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: #4da6ff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-            text-align: center;
-        }
-        
-        .character-link:hover {
-            background-color: #3a80c2;
-        }
-        
-        .green-theme {
-            background-color: #1a472a;
-        }
-        
-        .green-theme .character-name {
+        .highlight {
             color: #2ecc71;
-        }
-        
-        .red-theme {
-            background-color: #5c1a1a;
-        }
-        
-        .red-theme .character-name {
-            color: #e74c3c;
-        }
-        
-        .yellow-theme {
-            background-color: #5c4d1a;
-        }
-        
-        .yellow-theme .character-name {
-            color: #f1c40f;
-        }
-        
-        .white-theme {
-            background-color: #2c3e50;
-        }
-        
-        .white-theme .character-name {
-            color: #ecf0f1;
-        }
-        
-        .concept {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .concept-image {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            background-color: #333;
-        }
-        
-        .concept-text {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .buttons {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .button {
-            padding: 12px 24px;
-            background-color: #4da6ff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
             font-weight: bold;
         }
         
-        .button:hover {
-            background-color: #3a80c2;
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
         
-        .about {
+        .info-box {
+            background-color: #1a472a;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .ability-list {
+            background-color: #1a2e1a;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .competition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .competition-item {
+            background-color: #1a472a;
+            padding: 15px;
+            border-radius: 6px;
             text-align: center;
+            border: 1px solid #2ecc71;
         }
         
         footer {
@@ -215,10 +143,6 @@
         }
         
         @media (max-width: 768px) {
-            .characters {
-                grid-template-columns: 1fr;
-            }
-            
             h1 {
                 font-size: 2.5rem;
             }
@@ -226,77 +150,150 @@
             header {
                 height: 300px;
             }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .competition-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="LOST.png" alt="REVIVAL: LOST Background" class="header-bg">
+        <img src="zaril.png" alt="Zaril Nanaz" class="header-bg">
         <div class="header-content">
-            <h1>REVIVAL: LOST</h1>
-            <p class="tagline">A horror game, price is 5 bucks.</p>
+            <h1>Zaril Nanaz</h1>
+            <p class="tagline">The Nerd Brother - Psychology Master</p>
         </div>
     </header>
     
     <div class="container">
-        <section id="characters">
-            <h2>Main Characters</h2>
-            <div class="characters">
-                <div class="character-card green-theme">
-                    <img src="Zaril.png" alt="Zaril Nanaz" class="character-image">
-                    <div class="character-info">
-                        <h3 class="character-name">Zaril Nanaz</h3>
-                        <p class="character-bio">One of the Nanaz brothers who are deep in the rivalry, he is the nerd brother and one of the protagonists of the game, click for her bio to learn more.</p>
-                        <a href="https://zapped-zaid5.github.io/ZARIL/" class="character-link">View Bio</a>
-                    </div>
+        <section id="background">
+            <h2>Background, Personality & Motivations</h2>
+            
+            <h3>Identity and Background</h3>
+            <div class="info-grid">
+                <div class="info-box">
+                    <h4>Basic Information</h4>
+                    <p>Zaril Nanaz is one of the two main protagonists in <span class="highlight">Revival: Lost</span>, alongside his brother Liraz. Both brothers are <span class="highlight">60 years old</span> and have been separated since they were 10 due to their intense rivalry.</p>
                 </div>
-                
-                <div class="character-card red-theme">
-                    <img src="Liraz.png" alt="Liraz Nanaz" class="character-image">
-                    <div class="character-info">
-                        <h3 class="character-name">Liraz Nanaz</h3>
-                        <p class="character-bio">One of the Nanaz brothers who are deep in the rivalry, he is the scavenger brother and one of the protagonists of the game, click for her bio to learn more.</p>
-                        <a href="https://zapped-zaid5.github.io/LIRAZ/" class="character-link">View Bio</a>
-                    </div>
-                </div>
-                
-                <div class="character-card yellow-theme">
-                    <img src="Genie.png" alt="Genie[Unnamed]" class="character-image">
-                    <div class="character-info">
-                        <h3 class="character-name">Genie[Unnamed]</h3>
-                        <p class="character-bio">a genie? what's she doing here? i dunno check her bio to find out i guess</p>
-                        <a href="https://zapped-zaid5.github.io/GENIE/" class="character-link">View Bio</a>
-                    </div>
-                </div>
-                
-                <div class="character-card white-theme">
-                    <img src="Sinus.png" alt="Sinus" class="character-image">
-                    <div class="character-info">
-                        <h3 class="character-name">Sinus</h3>
-                        <p class="character-bio">Organism reading this, i am Sinus, An EYX. read my bio to comprehend</p>
-                        <a href="https://zapped-zaid5.github.io/SINUS/" class="character-link">View Bio</a>
-                    </div>
+                <div class="info-box">
+                    <h4>Education</h4>
+                    <p>Zaril holds a <span class="highlight">PhD in Psychology</span> and has a <span class="highlight">psychology master's degree</span>, making him the intellectual "nerd brother" of the duo.</p>
                 </div>
             </div>
+            
+            <h3>The Separation</h3>
+            <p>The brothers' rivalry was so intense they were "about to nuke the world to win." Responsible parents separated them for <span class="highlight">50 years</span>. They are eventually reunited by <span class="highlight">The Diabolic</span>, who uses their current trauma and places money around to bring them back together.</p>
+            
+            <h3>Personality Traits</h3>
+            <p>Zaril is portrayed as the <span class="highlight">nerd brother</span>, the smart one of the two. He has an <span class="highlight">extensive vocabulary and knowledge</span> though he is slightly rigid. He uses his smarts to <span class="highlight">outmaneuver his brother Liraz at every opportunity</span> he gets. He also has experience in the <span class="highlight">sword and culinary arts</span>. He enjoys <span class="highlight">smiling over his defeated brother</span>.</p>
+            
+            <p>Zaril is portrayed as <span class="highlight">conspiring</span> and focused on farming wishes from the Genie to create "ludicrous stuff for violence." He's initially skeptical, stating he won't accept the Genie's existence until he has a "portable version of Neptune legally under his name."</p>
+            
+            <p>The Genie nicknames him <span class="highlight">"nerdillious Wierdo"</span>, which he objects to strongly, even challenging her to a duel over it. He enjoys conflict as a "perfect distraction for Liraz" and takes winning very seriously in competitions.</p>
+            
+            <h3>Core Motivation</h3>
+            <p>Zaril's primary motivation is his <span class="highlight">rivalry with Liraz</span>. Their obsession with competing against each other is literally what keeps them alive in the haunted house. The game explores the theme: <span class="highlight">"What is the result of obsession?"</span></p>
+            
+            <p>If one brother dies, the other also dies because without the competition, they lose their reason to avoid the ghosts. They need <span class="highlight">competition, not cooperation</span>, to survive.</p>
         </section>
         
-        <section id="concept">
-            <h2>Game Concept</h2>
-            <div class="concept">
-                <img src="House.png" alt="Game House Concept" class="concept-image">
-                <p class="concept-text">explore the house where a family once happy now roams as ghosts due to some incident as one of the 2 brothers in REVIVAL: LOST also do check the gameplay and house info if ur interested</p>
-                <div class="buttons">
-                    <a href="https://zapped-zaid5.github.io/GAME/" class="button">Gameplay Info</a>
-                    <a href="https://zapped-zaid5.github.io/LORE/" class="button">Backdrop Info</a>
-                </div>
+        <section id="gameplay">
+            <h2>Gameplay & Abilities</h2>
+            
+            <h3>Combat System</h3>
+            <div class="ability-list">
+                <h4>Weapon Mastery</h4>
+                <p>Zaril uses a <span class="highlight">Katana and Nata duo</span> to defeat enemies with these combat moves:</p>
+                <ul>
+                    <li><span class="highlight">Stinger attack</span> - Precise thrusting technique</li>
+                    <li><span class="highlight">Jump slash</span> - Aerial sword combat</li>
+                    <li><span class="highlight">Throwing his Nata</span> - Ranged weapon attack (must be reclaimed afterward)</li>
+                </ul>
             </div>
+            
+            <h3>DJ Mechanics</h3>
+            <div class="ability-list">
+                <h4>Psychology-Based Audio Control</h4>
+                <p>Utilizing his psychology degree, Zaril employs music as a tactical weapon:</p>
+                <ul>
+                    <li><span class="highlight">Anxiety-inducing music</span> - Scares the ghosts</li>
+                    <li><span class="highlight">Funky music</span> - Distracts the ghosts</li>
+                </ul>
+            </div>
+            
+            <h3>Trash Talk System</h3>
+            <div class="ability-list">
+                <h4>Verbal Combat Mechanics</h4>
+                <p>Zaril and Liraz use <span class="highlight">trash talk as a survival mechanic</span> against ghosts:</p>
+                <ul>
+                    <li><span class="highlight">Utter ignorance</span> - Causes panic</li>
+                    <li><span class="highlight">Quipping</span> - Creates confusion</li>
+                    <li><span class="highlight">Insulting</span> - Disrupts ghost behavior</li>
+                    <li><span class="highlight">Breakdancing</span> - Disorients enemies</li>
+                </ul>
+                
+                <h4>Upgradeable Stats:</h4>
+                <ul>
+                    <li>Vocabulary</li>
+                    <li>Volume control</li>
+                    <li>Delivery Timing</li>
+                </ul>
+                
+                <p><em>Note: Trash talking certain family members can trigger protective frenzies from other ghosts.</em></p>
+            </div>
+            
+            <h3>Genie Wish System</h3>
+            <p>Zaril can <span class="highlight">"farm wishes"</span> from the Genie, using them as major moves to obtain resources and items like bazookas or his coveted portable Neptune.</p>
         </section>
         
-        <section id="about">
-            <h2>About Transception Games</h2>
-            <div class="about">
-                <p>Transception Games was founded by Zapped Zaid with the vision of creating immersive and adaptive gaming experiences that blur the line between player choice and narrative.</p>
+        <section id="events">
+            <h2>Events & Interactions</h2>
+            
+            <h3>Brother Competitions</h3>
+            <p>Zaril and Liraz engage in various competitions as part of their survival strategy:</p>
+            
+            <div class="competition-grid">
+                <div class="competition-item">Uno</div>
+                <div class="competition-item">Sleep Contest</div>
+                <div class="competition-item">Connect 4</div>
+                <div class="competition-item">Cook Offs</div>
+                <div class="competition-item">Dance Battles</div>
+                <div class="competition-item">Rap Battles</div>
+                <div class="competition-item">Debates</div>
+                <div class="competition-item">Rock Paper Scissors</div>
+                <div class="competition-item">Red Hands</div>
+                <div class="competition-item">WWE Fighting</div>
+                <div class="competition-item">Insult Contests</div>
+                <div class="competition-item">Eating Contests</div>
+                <div class="competition-item">Chess</div>
+                <div class="competition-item">Snakes and Ladders</div>
+                <div class="competition-item">Monopoly</div>
             </div>
+            
+            <h3>Notable Competition Moments</h3>
+            <div class="info-grid">
+                <div class="info-box">
+                    <h4>Uno Victory</h4>
+                    <p>Zaril wins using a "swap decks" card and reminds Liraz that he didn't say "Uno," showcasing their competitive and insulting dynamic.</p>
+                </div>
+                <div class="info-box">
+                    <h4>Connect 4 Triumph</h4>
+                    <p>Uses his psychology degree as a taunt during the match, demonstrating how he leverages his education as psychological warfare.</p>
+                </div>
+            </div>
+            
+            <h3>Game Endings & Lore Role</h3>
+            <p>Zaril can be the protagonist who escapes, cures family members, or interacts with the Mother in various game endings. However, in certain bad endings, if he goes "too deep" in the secret parts of the game, <span class="highlight">The Diabolic will take him as his vessel</span> to destroy the universe.</p>
+            
+            <p>In the "Bevrious" sequence, if Zaril and Liraz reach the Sinus section, they are dismembered and die. At the CANON end of the game, both brothers eventually join a <span class="highlight">multiversal anti-diabolic group</span>.</p>
+            
+            <h3>Media Presence</h3>
+            <p>Zaril is featured in the game's main theme song, described as a rap battle between him and Liraz. He's also depicted on the potential box art in a sword fight with his brother. The game's creator, Zapped Zaid, hopes to voice act Zaril personally.</p>
         </section>
     </div>
     
